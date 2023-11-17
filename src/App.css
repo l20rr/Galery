@@ -2,6 +2,8 @@
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 body {
   margin: 0;
@@ -44,6 +46,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 video {
@@ -57,6 +60,10 @@ video {
 #geralbtn{
   width: 100%;
 
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #geralbtn>#btn+ {
@@ -87,6 +94,7 @@ input{
   margin-left: 10%;
   width: 15%;
   text-align: center;
+ 
 }
 
 .button-30 {
@@ -139,25 +147,71 @@ input{
   text-align: left;
 }
 
-.file-label {
-  display: inline-block;
+.sectionphoto2{
+  /*Desck   width: 60%;
+  height: 80%;
+  
+  mob
+  width: 20%;
+  height: 80%;
+
+  tablet
+    width: 40%;
+  height: 80%;
+  */
+  width: 60%;
+  height: 80%;
+  box-shadow: rgba(0, 0, 0, 0.683) 0px 13px 27px -5px, rgb(0, 0, 0) 0px 8px 16px -8px;
 
 }
 
-#fileinp {
-  padding: 2px 5px;
-  font-size: 16px;
-  text-align: center;
+
+
+.App-header>.enlarged-photo{
+  padding: 10px;
+  height: 80vh;
+  width: 95vw;
+  background-color: #0000008a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 12px;
+}
+
+.btnsbig{
+  height: 90%;
+  width: 30%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btnsbig>button{
+  margin-left: 90%;
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+  font-size: 2.5rem;
+  color: white;
   cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  color: #333;
-  width: 3%;
-  font-size: 2rem;
-  font-weight: 900;
+}
+#btngeral{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  border-radius: 20px;
+  width: 80%;
+  background-color: #000000;
 }
 
-#fileInput {
-  display: none;
+.btndisplay{
+  margin: 20px;
+  width: 70%;
+  height: 10%;
+  border-radius: 20px;
+  cursor: pointer;
 }
