@@ -13,8 +13,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
+h2{
+  color: white;
+}
 .App-header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
@@ -147,24 +148,40 @@ input{
   text-align: left;
 }
 
-.sectionphoto2{
-  /*Desck   width: 60%;
-  height: 80%;
-  
-  mob
-  width: 20%;
-  height: 80%;
-
-  tablet
-    width: 40%;
-  height: 80%;
-  */
-  width: 60%;
-  height: 80%;
+#space{
+  width: 70%; /* Ou qualquer largura desejada para desktop */
+  height: 90%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionphoto2{  
   box-shadow: rgba(0, 0, 0, 0.683) 0px 13px 27px -5px, rgb(0, 0, 0) 0px 8px 16px -8px;
-
+  transition: width 0.6s ease, height 0.6s ease; /* Adiciona transição suave para largura e altura */
+  border-radius: 5px;
+}
+.sectionphoto2>img{
+  border-radius: 5px;
 }
 
+/* Estilos para o tamanho mobile */
+.sectionphoto2.mobile {
+  width: 30%; /* Ou qualquer largura desejada para mobile */
+  height: 90%; /* Ou qualquer altura desejada para mobile */
+}
+
+/* Estilos para o tamanho desktop */
+.sectionphoto2.desktop {
+  width: 100%; /* Ou qualquer largura desejada para desktop */
+  height: 100%; /* Ou qualquer altura desejada para desktop */
+}
+
+/* Estilos para o tamanho tablet */
+.sectionphoto2.tablet {
+  width: 80%; /* Ou qualquer largura desejada para tablet */
+  height: 80%; /* Ou qualquer altura desejada para tablet */
+}
 
 
 .App-header>.enlarged-photo{
@@ -210,8 +227,81 @@ input{
 
 .btndisplay{
   margin: 20px;
-  width: 70%;
+  width: 20%;
   height: 10%;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
+  color: #36395A;
+}
+
+.btn3{
+  height: 10%;
+  width: 50%;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sectionphoto {
+    width: 83vw;
+    margin-top: 0px; /* Margem padrão para colunas pares */
+  }
+  
+  input{
+    width: 40%;
+  }
+  
+  .App-header>.enlarged-photo{
+    flex-direction: column;
+  }
+
+  #btngeral{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vw;
+    border-radius: 20px;
+    width: 80vw;
+    background-color: #000000;
+  }
+
+  .sectionphoto2.mobile {
+    width: 80%; /* Ou qualquer largura desejada para tablet */
+    height: 90%; /* Ou qualquer altura desejada para tablet */
+  }
+  
+  /* Estilos para o tamanho desktop */
+  .sectionphoto2.desktop {
+    width: 100%; /* Ou qualquer largura desejada para tablet */
+    height: 60%; /* Ou qualquer altura desejada para tablet */
+  }
+  
+  /* Estilos para o tamanho tablet */
+  .sectionphoto2.tablet {
+    width: 100%; /* Ou qualquer largura desejada para tablet */
+    height: 50%; /* Ou qualquer altura desejada para tablet */
+  }
+  #x{
+    display: none;
+  }
+
+  .App-header>.enlarged-photo{
+    padding: 10px;
+    height: 100vh;
+    width: 95vw;
+    background-color: #0000008a;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+  }
+  
 }
