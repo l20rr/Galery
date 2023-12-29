@@ -237,7 +237,7 @@ input{
 .btn3{
   height: 10%;
   width: 50%;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -304,4 +304,8 @@ input{
     border-radius: 12px;
   }
   
+  .btn3{
+    padding: 15px;
+  }
+
 }
